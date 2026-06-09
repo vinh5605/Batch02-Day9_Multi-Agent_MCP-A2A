@@ -14,3 +14,7 @@ INFO:     Uvicorn running on http://0.0.0.0:10103 (Press CTRL+C to quit)
 2026-06-09 16:42:04,762 [compliance_agent] INFO ComplianceAgent executing | task=f2bd9d96-5e30-4ac5-bbf9-0699c029c230 context=5f82b332-c44b-4abf-8265-f751130bc99b trace=95bdb090-03c4-4c2b-ab6d-c492991bc1f9 depth=2
 2026-06-09 16:42:04,763 [compliance_agent] INFO Task not found or task_id not set. Creating new task for event (task_id: f2bd9d96-5e30-4ac5-bbf9-0699c029c230, context_id: 5f82b332-c44b-4abf-8265-f751130bc99b).
 2026-06-09 16:42:06,292 [compliance_agent] INFO HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 16:59:34,505 [compliance_agent] WARNING Deprecated agent card endpoint '/.well-known/agent.json' accessed. Please use '/.well-known/agent-card.json' instead. This endpoint will be removed in a future version.
+2026-06-09 16:59:34,509 [compliance_agent] INFO ComplianceAgent executing | task=336bf426-85ee-4db5-beec-a810801f96c7 context=04ec2b86-1f0e-49c7-bde1-6c37ca8fc224 trace=970d3197-3b14-4b36-9094-e7d93abc52a8 depth=2
+2026-06-09 16:59:34,510 [compliance_agent] INFO Task not found or task_id not set. Creating new task for event (task_id: 336bf426-85ee-4db5-beec-a810801f96c7, context_id: 04ec2b86-1f0e-49c7-bde1-6c37ca8fc224).
+2026-06-09 16:59:36,019 [compliance_agent] INFO HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"

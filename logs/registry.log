@@ -11,3 +11,6 @@ INFO:     127.0.0.1:54853 - "GET /discover/compliance_question HTTP/1.1" 200 OK
 INFO:     127.0.0.1:52218 - "GET /discover/legal_question HTTP/1.1" 200 OK
 INFO:     127.0.0.1:60711 - "GET /discover/tax_question HTTP/1.1" 200 OK
 INFO:     127.0.0.1:60712 - "GET /discover/compliance_question HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64348 - "GET /discover/legal_question HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53781 - "GET /discover/tax_question HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53782 - "GET /discover/compliance_question HTTP/1.1" 200 OK
