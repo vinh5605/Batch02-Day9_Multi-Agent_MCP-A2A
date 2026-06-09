@@ -4,10 +4,15 @@ Sends a legal question to the Customer Agent and prints the response.
 """
 
 import asyncio
+import io
 import os
 import sys
 
 import httpx
+
+# Ensure stdout can handle Unicode on Windows (cp1252 → utf-8)
+if sys.stdout.encoding and sys.stdout.encoding.lower() not in ("utf-8", "utf-16"):
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -25,7 +30,7 @@ async def main() -> None:
     print(f"Question: {QUESTION}")
     print("-" * 60)
 
-    async with httpx.AsyncClient(timeout=300.0) as http_client:
+    async with httpx.AsyncClient(timeout=1200.0) as http_client:
         # Resolve agent card
         card_url = f"{CUSTOMER_AGENT_URL}/.well-known/agent.json"
         try:

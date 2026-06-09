@@ -14,7 +14,7 @@ import logging
 from typing import Annotated, TypedDict
 
 from langchain_core.messages import HumanMessage, SystemMessage
-from langgraph.constants import Send
+from langgraph.types import Send
 from langgraph.graph import END, StateGraph
 
 from common.llm import get_llm

@@ -1,0 +1,13 @@
+INFO:     127.0.0.1:51145 - "GET /agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61358 - "POST /register HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61357 - "POST /register HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61363 - "POST /register HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61368 - "POST /register HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61370 - "GET /agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50516 - "GET /agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61118 - "GET /discover/legal_question HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54852 - "GET /discover/tax_question HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54853 - "GET /discover/compliance_question HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52218 - "GET /discover/legal_question HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60711 - "GET /discover/tax_question HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60712 - "GET /discover/compliance_question HTTP/1.1" 200 OK

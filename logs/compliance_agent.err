@@ -1,0 +1,8 @@
+warning: `VIRTUAL_ENV=D:\New folder` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead
+2026-06-09 15:39:27,890 [compliance_agent] INFO HTTP Request: POST http://localhost:10000/register "HTTP/1.1 200 OK"
+2026-06-09 15:39:27,892 [compliance_agent] INFO Registered with registry (attempt 1)
+2026-06-09 15:39:27,896 [compliance_agent] INFO Compliance Agent listening on port 10103
+INFO:     Started server process [19224]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:10103 (Press CTRL+C to quit)

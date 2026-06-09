@@ -1,0 +1,193 @@
+warning: `VIRTUAL_ENV=D:\New folder` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead
+2026-06-09 15:39:54,297 [customer_agent] INFO HTTP Request: POST http://localhost:10000/register "HTTP/1.1 200 OK"
+2026-06-09 15:39:54,299 [customer_agent] INFO Registered with registry (attempt 1)
+2026-06-09 15:39:54,302 [customer_agent] INFO Customer Agent listening on port 10100
+INFO:     Started server process [38008]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:10100 (Press CTRL+C to quit)
+2026-06-09 15:40:23,536 [customer_agent] WARNING Deprecated agent card endpoint '/.well-known/agent.json' accessed. Please use '/.well-known/agent-card.json' instead. This endpoint will be removed in a future version.
+2026-06-09 15:40:23,761 [customer_agent] INFO CustomerAgent executing | task=8157fe0d-1dc6-4e94-8cca-7a44b42ac208 context=04832f81-7608-4d43-aac6-39536f678047 trace=0fd36c80-9a68-4c82-b1ee-92232aee0e15 depth=0
+2026-06-09 15:40:24,227 [customer_agent] INFO Task not found or task_id not set. Creating new task for event (task_id: 8157fe0d-1dc6-4e94-8cca-7a44b42ac208, context_id: 04832f81-7608-4d43-aac6-39536f678047).
+2026-06-09 15:40:26,597 [customer_agent] INFO Retrying request to /chat/completions in 0.403706 seconds
+2026-06-09 15:40:29,286 [customer_agent] INFO Retrying request to /chat/completions in 0.984613 seconds
+2026-06-09 15:40:32,563 [customer_agent] ERROR CustomerAgent execution error: Connection error.
+Traceback (most recent call last):
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\httpcore\_async\connection.py", line 101, in handle_async_request
+    raise exc
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\httpcore\_async\connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\httpcore\_async\connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\httpcore\_backends\auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: All connection attempts failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\openai\_base_client.py", line 1648, in request
+    response = await self._send_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\openai\_client.py", line 946, in _send_request
+    return await self._send_with_auth_retry(request, stream=stream, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\openai\_client.py", line 924, in _send_with_auth_retry
+    response = await super()._send_request(request, stream=stream, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\openai\_base_client.py", line 1571, in _send_request
+    return await self._client.send(request, stream=stream, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: All connection attempts failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\customer_agent\agent_executor.py", line 50, in execute
+    result = await graph.ainvoke(
+             ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\langgraph\pregel\main.py", line 4057, in ainvoke
+    async for chunk in self.astream(
+    ...<30 lines>...
+            chunks.append(chunk)
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3407, in astream
+    async for _ in runner.atick(
+    ...<16 lines>...
+            yield o
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 396, in atick
+    await arun_with_retry(
+    ...<15 lines>...
+    )
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 706, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 733, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        step.ainvoke(input, config, **kwargs), context=context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 492, in ainvoke
+    ret = await asyncio.create_task(coro, context=context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\langgraph\prebuilt\chat_agent_executor.py", line 707, in acall_model
+    response = cast(AIMessage, await static_model.ainvoke(model_input, config))  # type: ignore[union-attr]
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3375, in ainvoke
+    input_ = await coro_with_context(part(), context, create_task=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 5894, in ainvoke
+    return await self.bound.ainvoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 497, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1834, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+        prompt_messages, stop=stop, callbacks=callbacks, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1792, in agenerate
+    raise exceptions[0]
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 2127, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+        messages, stop=stop, run_manager=run_manager, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1925, in _agenerate
+    _handle_openai_api_error(e)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1918, in _agenerate
+    raw_response = await self.async_client.with_raw_response.create(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **payload
+        ^^^^^^^^^
+    )
+    ^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\openai\_legacy_response.py", line 384, in wrapped
+    return cast(LegacyAPIResponse[R], await func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 2739, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<53 lines>...
+    )
+    ^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\openai\_base_client.py", line 1931, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\VinAI\Lab9\Batch02-Day9_Multi-Agent_MCP-A2A\.venv\Lib\site-packages\openai\_base_client.py", line 1683, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+During task with name 'agent' and id '26be7ef8-497d-4781-32d6-42c60ef4e594'

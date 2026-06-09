@@ -1,0 +1,16 @@
+warning: `VIRTUAL_ENV=D:\New folder` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead
+2026-06-09 16:27:29,137 [compliance_agent] INFO HTTP Request: POST http://localhost:10000/register "HTTP/1.1 200 OK"
+2026-06-09 16:27:29,138 [compliance_agent] INFO Registered with registry (attempt 1)
+2026-06-09 16:27:29,140 [compliance_agent] INFO Compliance Agent listening on port 10103
+INFO:     Started server process [38376]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:10103 (Press CTRL+C to quit)
+2026-06-09 16:34:29,463 [compliance_agent] WARNING Deprecated agent card endpoint '/.well-known/agent.json' accessed. Please use '/.well-known/agent-card.json' instead. This endpoint will be removed in a future version.
+2026-06-09 16:34:29,469 [compliance_agent] INFO ComplianceAgent executing | task=9ac4337b-9d8c-4710-b4e3-e342e84e5db1 context=eabe3abf-0692-4197-bfad-d6130b527688 trace=2e9b86dd-aaf7-406e-974e-73bf8d1d6426 depth=2
+2026-06-09 16:34:30,119 [compliance_agent] INFO Task not found or task_id not set. Creating new task for event (task_id: 9ac4337b-9d8c-4710-b4e3-e342e84e5db1, context_id: eabe3abf-0692-4197-bfad-d6130b527688).
+2026-06-09 16:34:31,707 [compliance_agent] INFO HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 16:42:04,758 [compliance_agent] WARNING Deprecated agent card endpoint '/.well-known/agent.json' accessed. Please use '/.well-known/agent-card.json' instead. This endpoint will be removed in a future version.
+2026-06-09 16:42:04,762 [compliance_agent] INFO ComplianceAgent executing | task=f2bd9d96-5e30-4ac5-bbf9-0699c029c230 context=5f82b332-c44b-4abf-8265-f751130bc99b trace=95bdb090-03c4-4c2b-ab6d-c492991bc1f9 depth=2
+2026-06-09 16:42:04,763 [compliance_agent] INFO Task not found or task_id not set. Creating new task for event (task_id: f2bd9d96-5e30-4ac5-bbf9-0699c029c230, context_id: 5f82b332-c44b-4abf-8265-f751130bc99b).
+2026-06-09 16:42:06,292 [compliance_agent] INFO HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"

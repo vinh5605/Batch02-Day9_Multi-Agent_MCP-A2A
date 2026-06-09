@@ -1,0 +1,16 @@
+warning: `VIRTUAL_ENV=D:\New folder` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead
+2026-06-09 16:26:20,684 [registry] INFO Starting Registry on port 10000
+INFO:     Started server process [29044]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:10000 (Press CTRL+C to quit)
+2026-06-09 16:27:29,134 [registry] INFO Registered agent 'tax-agent' at http://localhost:10102 (tasks=['tax_question'])
+2026-06-09 16:27:29,135 [registry] INFO Registered agent 'compliance-agent' at http://localhost:10103 (tasks=['compliance_question'])
+2026-06-09 16:27:31,950 [registry] INFO Registered agent 'law-agent' at http://localhost:10101 (tasks=['legal_question'])
+2026-06-09 16:27:35,016 [registry] INFO Registered agent 'customer-agent' at http://localhost:10100 (tasks=[])
+2026-06-09 16:32:05,610 [registry] INFO Discovered agent 'law-agent' for task 'legal_question'
+2026-06-09 16:34:29,173 [registry] INFO Discovered agent 'tax-agent' for task 'tax_question'
+2026-06-09 16:34:29,175 [registry] INFO Discovered agent 'compliance-agent' for task 'compliance_question'
+2026-06-09 16:39:52,363 [registry] INFO Discovered agent 'law-agent' for task 'legal_question'
+2026-06-09 16:42:04,468 [registry] INFO Discovered agent 'tax-agent' for task 'tax_question'
+2026-06-09 16:42:04,469 [registry] INFO Discovered agent 'compliance-agent' for task 'compliance_question'
